@@ -61,6 +61,10 @@ entry in `_includes/header.html`.
 - Internal links use `relative_url`, e.g.
   `[what we need]({{ '/what-we-need.html' | relative_url }})`. Bare relative
   paths break on post URLs, which are nested three levels deep.
+- In posts, every link that leaves the site opens in a new tab. Kramdown carries
+  the attributes on the link:
+  `[text](https://example.com){:target="_blank" rel="noopener noreferrer"}`.
+  Internal links stay in the same tab.
 - The contact form is `{{ site.data.contact.contact_form }}`; addresses, phone
   numbers, and social links come from `_data/contact.yml`. Do not hard-code any
   of them.
